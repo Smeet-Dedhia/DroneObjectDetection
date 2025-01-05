@@ -24,7 +24,18 @@ We will train the existing Models using object-detection datasets (visDrone Data
 that we can improve the accuracy of these models.
 
 ## Steps & Workflow:
-1. Load existing weights for SSD MobileNet, YOLO and RetinaNet.
-2. Train these 3 models on the visDrone dataset.
-3. Evaluate performance of all models on actual drone footage
-4. Compare the models in terms of accuracy, speed and memory.
+1. Load & Preprocess the VisDrone dataset.
+2. Load existing weights for SSD MobileNet, YOLO and RetinaNet.
+3. Train these 3 models on the visDrone dataset.
+4. Evaluate performance of all models on actual drone footage
+5. Compare the models in terms of accuracy, speed and memory.
+
+## Conlusion
+While all models fail to detect all the objects, we can see that:
+1. YOLO model has the maximum mAP score and hence has the best performance
+2. RetinaNet model has middling mAP. It needs to trained on much more epochs which is not possible on colab.
+3. SSD model has the least mAP. This is apparently becuase proper training of SSD requires 200+ hrs.
+### Classwise MAP
+![image](https://github.com/user-attachments/assets/494250f4-119f-46b0-8d7a-e04da4d8f0bf)
+![image](https://github.com/user-attachments/assets/dc85936f-41c4-4243-b0a8-c01369d99a44)
+
